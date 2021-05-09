@@ -1,0 +1,8 @@
+<form>
+  <ul  *ngFor="let p of photos">
+    <li *ngIf="IDa == p.albumId">
+    <p><b ><h3>Indice Álbum[{{p.albumId}}] - Título: {{p.title}}</h3> Indice Imagem[{{p.id}}]    </b></p>
+      <img src="{{p.thumbnailUrl}}" alt="" >
+    </li>
+  </ul>
+  </form>
