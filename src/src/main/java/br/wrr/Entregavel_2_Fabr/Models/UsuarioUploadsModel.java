@@ -2,10 +2,15 @@ package br.wrr.Entregavel_2_Fabr.Models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class UsuarioUploadsModel {
 
+  @Id
+  @GeneratedValue(strategy= GenerationType.IDENTITY)
   @Column(nullable = false)
   private Long id_uploads;
 

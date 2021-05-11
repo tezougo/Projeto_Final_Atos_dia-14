@@ -1,9 +1,13 @@
 package br.wrr.Entregavel_2_Fabr.Models;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity //é usado se n estiver no banco?
 public class TelaLoginModel {
 
+  @Id
   @Column(nullable = true)
   private String usuariologar;
   private String senhalogar;

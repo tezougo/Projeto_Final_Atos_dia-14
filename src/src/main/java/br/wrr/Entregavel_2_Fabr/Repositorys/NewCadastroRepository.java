@@ -9,4 +9,6 @@ import br.wrr.Entregavel_2_Fabr.Models.NewCadastroModel;
 public interface NewCadastroRepository extends JpaRepository<NewCadastroModel, Long>{
 
   public NewCadastroModel findByUsuario(String usuario);
+  public NewCadastroModel findByEmail(String email);
+  public NewCadastroModel getByEmail(String email);
 }

@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class NewCadastroModel {
@@ -22,6 +23,10 @@ public class NewCadastroModel {
     this.usuario = usuario;
     this. senha = senha;
     this.email = email;
+  }
+
+  public NewCadastroModel(){
+
   }
 
   public long getId() {

@@ -66,7 +66,7 @@ public void deleteCadastro(@PathVariable String nome) {
 @GetMapping("/{usuariologar},{senhalogar}")
 public TelaLoginModel verificaUsuario(@RequestBody TelaLoginModel TelaLoginModel,
     @PathVariable String usuariologar, String senhalogar) {
-  TelaLoginModel verifica = telaLoginRepository.findByConta(usuariologar, senhalogar);
+  TelaLoginModel verifica = telaLoginRepository.findByUsuariologarAndSenhalogar(usuariologar, senhalogar);
   if (verifica == null) {
     System.out.println("Usuario ou senha incorretos!");
     return null;
