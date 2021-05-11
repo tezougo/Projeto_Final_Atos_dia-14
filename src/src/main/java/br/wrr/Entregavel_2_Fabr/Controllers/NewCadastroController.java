@@ -34,7 +34,28 @@ public class NewCadastroController {
     return newCadastroRepository.save(newCadastroModel);
   }
 
-  @GetMapping("/{usuario}")
+
+  NewCadastroModel newCadastroModel = new NewCadastroModel();
+
+  @GetMapping("/{usuario},{email}")
+  public NewCadastroModel getVerifica_user(@PathVariable String usuario, @PathVariable String email) {
+
+    NewCadastroModel verifica_usuario = newCadastroRepository.findByUsuario(usuario);
+    NewCadastroModel verifica_email = newCadastroRepository.findByEmail(email);
+    if (verifica_usuario == null && verifica_email == null) {
+
+      System.out.println("Usuario disponível para cadastro!");
+/*       verifica_usuario.setEmail(newCadastroModel.getEmail()); */
+      verifica_usuario.setUsuario(newCadastroModel.getUsuario());
+
+      return newCadastroRepository.save(verifica_usuario); // erro por retornar dois valor para uma query
+    }
+    System.out.println("Usuario indisponível para cadastro!");
+    return verifica_usuario = null;
+  }
+
+
+/*   @GetMapping("/{usuario}")
   public NewCadastroModel getVerifica_user(
       @PathVariable String usuario, @RequestBody NewCadastroModel newCadastroModel) {
     NewCadastroModel verifica_usuario = newCadastroRepository.findByUsuario(usuario);
@@ -45,7 +66,7 @@ public class NewCadastroController {
     }
     System.out.println("Usuario indisponível para cadastro!");
     return verifica_usuario = null;
-  }
+  } */
 
 /*   public ModelAndView componente2(){
 
