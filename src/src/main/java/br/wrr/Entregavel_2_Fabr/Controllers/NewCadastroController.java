@@ -1,6 +1,7 @@
 package br.wrr.Entregavel_2_Fabr.Controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -37,21 +38,28 @@ public class NewCadastroController {
 
   NewCadastroModel newCadastroModel = new NewCadastroModel();
 
-  @GetMapping("/{usuario},{email}")
+  @PostMapping("/{usuario}/{email}")
   public NewCadastroModel getVerifica_user(@PathVariable String usuario, @PathVariable String email) {
 
-    NewCadastroModel verifica_usuario = newCadastroRepository.findByUsuario(usuario);
-    NewCadastroModel verifica_email = newCadastroRepository.findByEmail(email);
-    if (verifica_usuario == null && verifica_email == null) {
+  /*  NewCadastroModel verifica_usuario = newCadastroRepository.findByUsuario(usuario);
+    NewCadastroModel verifica_email = newCadastroRepository.findByEmail(email); */
+    Optional<NewCadastroModel> usuariomodel = newCadastroRepository.findByEmailAndUsuario(email, usuario);
+    if (usuariomodel.isEmpty()) {
 
       System.out.println("Usuario disponível para cadastro!");
 /*       verifica_usuario.setEmail(newCadastroModel.getEmail()); */
-      verifica_usuario.setUsuario(newCadastroModel.getUsuario());
+      /* usuariomodel.setUsuario(newCadastroModel.getUsuario()); */
 
-      return newCadastroRepository.save(verifica_usuario); // erro por retornar dois valor para uma query
+    NewCadastroModel newcad = new NewCadastroModel();
+    newcad.setUsuario(usuario);
+    newcad.setEmail(email);
+
+  return newCadastroRepository.save(newcad);
+  // return newCadastroRepository.save(usuariomodel.orElseThrow(() -> new Exception("Exceção do Wagner!")));
+  // erro por retornar dois valor para uma query
     }
     System.out.println("Usuario indisponível para cadastro!");
-    return verifica_usuario = null;
+    return null;
   }
 
 
