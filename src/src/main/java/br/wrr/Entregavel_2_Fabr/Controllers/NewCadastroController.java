@@ -35,8 +35,8 @@ public class NewCadastroController {
   }
 
   @GetMapping("/{usuario}")
-  public NewCadastroModel putCadastro(@RequestBody NewCadastroModel newCadastroModel,
-      @PathVariable String usuario) {
+  public NewCadastroModel getVerifica_user(
+      @PathVariable String usuario, @RequestBody NewCadastroModel newCadastroModel) {
     NewCadastroModel verifica_usuario = newCadastroRepository.findByUsuario(usuario);
     if (verifica_usuario == null) {
       System.out.println("Usuario disponível para cadastro!");

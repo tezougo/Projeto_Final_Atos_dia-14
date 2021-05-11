@@ -1,9 +1,7 @@
 package br.wrr.Entregavel_2_Fabr.Models;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 
-@Entity
 public class TelaLoginModel {
 
   @Column(nullable = true)
