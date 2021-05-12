@@ -8,6 +8,6 @@ import br.wrr.Entregavel_2_Fabr.Models.UsuarioUploadsModel;
 @Repository
 public interface UsuarioUploadsRepository extends JpaRepository<UsuarioUploadsModel, Long>{
 
-  public UsuarioUploadsModel getByVideo(String video);
-  public UsuarioUploadsModel getByAudio(String audio);
+  public UsuarioUploadsModel findByVideo(String video);
+  public UsuarioUploadsModel findByAudio(String audio);
 }
