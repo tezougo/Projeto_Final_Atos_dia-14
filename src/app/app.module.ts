@@ -11,12 +11,15 @@ import { Componente1Component } from './compoments/componente1/componente1.compo
 import { ButtonModule } from 'primeng/button';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputTextModule} from 'primeng/inputtext';
+import { Componente3Component } from './compoments/componente3/componente3.component';
+import { FileUploadModule } from 'ng2-file-upload';
 
 @NgModule({
   declarations: [
     AppComponent,
     Componente1Component,
-    Componente2Component
+    Componente2Component,
+    Componente3Component
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { InputTextModule} from 'primeng/inputtext';
     FormsModule,
     InputTextModule,
     InputTextareaModule,
-    ButtonModule
+    ButtonModule,
+    FileUploadModule
 
   ],
   providers: [],

@@ -1,9 +1,9 @@
-div class="sectionLogin">
+<div class="sectionLogin">
 <div class="divLogin">
   <div class="p-field p-grid">
-    <label for="email" class="p-col-fixed" style="width:100px">Email</label>
+    <label for="usuario" class="p-col-fixed" style="width:100px">Usuario</label>
     <div class="p-col">
-      <input id="email" type="text" pInputText [(ngModel)]="email">
+      <input id="usuario" type="text" pInputText [(ngModel)]="usuario">
     </div>
   </div>
 
@@ -16,4 +16,5 @@ div class="sectionLogin">
   <br>
   <button pButton type="button" label="LOGAR" (click)="validaLogin()"></button>
   <button pButton routerlink="component2" type="button" label="CADASTRO"></button><br><br>
+</div>
 </div>
