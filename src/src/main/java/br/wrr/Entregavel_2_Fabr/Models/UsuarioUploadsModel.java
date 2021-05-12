@@ -52,6 +52,11 @@ public class UsuarioUploadsModel {
     this.audio = audio;
   }
 
+
+  public UsuarioUploadsModel(){
+
+  }
+
   @Override
   public int hashCode() {
     final int prime = 31;

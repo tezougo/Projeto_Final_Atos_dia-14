@@ -25,28 +25,24 @@ public class UsuarioUploadsController {
 
   @GetMapping("/arquivos")
   public List<UsuarioUploadsModel> getUsuarioUploads(){
-
     return usuariouploadsRepository.findAll();
   }
 
   @PostMapping("/uploadarquivo")
   @ResponseStatus(HttpStatus.CREATED)
   public UsuarioUploadsModel uploadarquivo(@RequestBody UsuarioUploadsModel usuariouploadsModel){
-
-    return usuariouploadsModel.save(usuariouploadsModel);
+    return usuariouploadsRepository.save(usuariouploadsModel);
   }
 
-  @DeleteMapping("/{video}")
+  @DeleteMapping("/video/{video}")
   @ResponseStatus(HttpStatus.NO_CONTENT)
   public void deleteVideo(@PathVariable String video) {
-
     usuariouploadsRepository.delete(usuariouploadsRepository.getByVideo(video));
   }
 
-  @DeleteMapping("/{audio}")
+  @DeleteMapping("/audio/{audio}")
   @ResponseStatus(HttpStatus.NO_CONTENT)
   public void deleteAudio(@PathVariable String audio) {
-
     usuariouploadsRepository.delete(usuariouploadsRepository.getByAudio(audio));
   }
 }
