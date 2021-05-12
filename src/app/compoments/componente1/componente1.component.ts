@@ -11,5 +11,6 @@ export class Componente1Component implements OnInit {
 
   ngOnInit(): void {
   }
-
+  usuario: string;
+  senha: string;
 }
