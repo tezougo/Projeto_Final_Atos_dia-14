@@ -39,6 +39,7 @@ public class NewCadastroController {
   NewCadastroModel newCadastroModel = new NewCadastroModel();
 
   @PostMapping("/{usuario}/{email}")
+  @ResponseStatus(HttpStatus.CREATED)
   public NewCadastroModel getVerifica_user(@PathVariable String usuario, @PathVariable String email) {
 
   /*  NewCadastroModel verifica_usuario = newCadastroRepository.findByUsuario(usuario);
@@ -54,11 +55,11 @@ public class NewCadastroController {
     newcad.setUsuario(usuario);
     newcad.setEmail(email);
 
-  return newCadastroRepository.save(newcad);
+    return newCadastroRepository.save(newcad);
   // return newCadastroRepository.save(usuariomodel.orElseThrow(() -> new Exception("Exceção do Wagner!")));
   // erro por retornar dois valor para uma query
     }
-    System.out.println("Usuario indisponível para cadastro!");
+    System.out.println("Usuario " + usuario  + "indisponível para cadastro!");
     return null;
   }
 
