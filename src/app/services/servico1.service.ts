@@ -9,17 +9,15 @@ export class Servico1Service {
 
   constructor(private http: HttpClient) { }
 
-  public getAlbum(): Observable<any>
+  public getLogin(): Observable<any>
     {
-      return this.http.get('https://jsonplaceholder.typicode.com/albums');
+      return this.http.get('http://localhost:8080/conta/login');
     }
-  public getPhoto(): Observable<any>
-  {
-    return this.http.get('https://jsonplaceholder.typicode.com/photos');
-
+  public postCadastro(usuario: string, email: string, senha: string): Observable<any>{
+    return this.http.get('http://localhost:8080/conta/' + usuario + '/' + email + '/' + senha);
   }
-  public getPhotosById(id): Observable<any>{
-    return this.http.get('https://jsonplaceholder.typicode.com/photos?idAlbum=' + id);
+/*   public getUsuarioUploads(id): Observable<any>{
+    return this.http.get('http://localhost:8080/usuariouploads' + id);
 
-  }
+  } */
 }

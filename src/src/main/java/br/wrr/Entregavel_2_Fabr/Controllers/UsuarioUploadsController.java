@@ -23,13 +23,13 @@ public class UsuarioUploadsController {
   @Autowired
   private UsuarioUploadsRepository usuariouploadsRepository;
 
-  @GetMapping
+  @GetMapping("/arquivos")
   public List<UsuarioUploadsModel> getUsuarioUploads(){
 
     return usuariouploadsRepository.findAll();
   }
 
-  @PostMapping
+  @PostMapping("/uploadarquivo")
   @ResponseStatus(HttpStatus.CREATED)
   public UsuarioUploadsModel uploadarquivo(@RequestBody UsuarioUploadsModel usuariouploadsModel){
 

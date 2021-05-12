@@ -13,4 +13,5 @@ public interface NewCadastroRepository extends JpaRepository<NewCadastroModel, L
   public Optional<NewCadastroModel> findByUsuario(String usuario);
   public Optional<NewCadastroModel> findByEmail(String email);
   public Optional<NewCadastroModel> findByEmailAndUsuario(String email, String usuario);
+
 }

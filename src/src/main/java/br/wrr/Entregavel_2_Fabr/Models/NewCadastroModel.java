@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class NewCadastroModel {
@@ -19,21 +18,20 @@ public class NewCadastroModel {
   private String senha;
   private String email;
 
-  public NewCadastroModel(String usuario, String senha, String email){
+/*   public NewCadastroModel(String usuario, String senha, String email){
     this.usuario = usuario;
-    this. senha = senha;
+    this.senha = senha;
     this.email = email;
-  }
+  } */
 
-  public NewCadastroModel(){
+/*   public NewCadastroModel(){
+  } */
 
-  }
-
-  public long getId() {
+  public Long getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(Long id) {
     this.id = id;
   }
 
@@ -66,7 +64,7 @@ public class NewCadastroModel {
     final int prime = 31;
     int result = 1;
     result = prime * result + ((email == null) ? 0 : email.hashCode());
-    result = prime * result + (int) (id ^ (id >>> 32));
+    result = prime * result + ((id == null) ? 0 : id.hashCode());
     result = prime * result + ((senha == null) ? 0 : senha.hashCode());
     result = prime * result + ((usuario == null) ? 0 : usuario.hashCode());
     return result;
@@ -86,7 +84,10 @@ public class NewCadastroModel {
         return false;
     } else if (!email.equals(other.email))
       return false;
-    if (id != other.id)
+    if (id == null) {
+      if (other.id != null)
+        return false;
+    } else if (!id.equals(other.id))
       return false;
     if (senha == null) {
       if (other.senha != null)

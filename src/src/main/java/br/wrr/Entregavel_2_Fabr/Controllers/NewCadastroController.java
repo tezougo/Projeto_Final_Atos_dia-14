@@ -17,50 +17,50 @@ import br.wrr.Entregavel_2_Fabr.Models.NewCadastroModel;
 import br.wrr.Entregavel_2_Fabr.Repositorys.NewCadastroRepository;
 
 @RestController
-@RequestMapping("/newcadastro")
+@RequestMapping("/conta")
 public class NewCadastroController {
 
   @Autowired // declara o controle desse objeto para o spring boot
   private NewCadastroRepository newCadastroRepository;
 
-  @GetMapping
+  @GetMapping("/login")
   public List<NewCadastroModel> getNewCadastro(){
-
     return newCadastroRepository.findAll();
   }
 
-  @PostMapping
+/*   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
   public NewCadastroModel postCadastro(@RequestBody NewCadastroModel newCadastroModel){
     return newCadastroRepository.save(newCadastroModel);
-  }
+  } */
 
 
   NewCadastroModel newCadastroModel = new NewCadastroModel();
 
-  @PostMapping("/{usuario}/{email}")
+  // cadastro
+  @PostMapping("/{usuario}/{email}/{senha}")
   @ResponseStatus(HttpStatus.CREATED)
-  public NewCadastroModel getVerifica_user(@PathVariable String usuario, @PathVariable String email) {
+  public NewCadastroModel getVerifica_user(@PathVariable String usuario, @PathVariable String email, @PathVariable String senha) {
 
-  /*  NewCadastroModel verifica_usuario = newCadastroRepository.findByUsuario(usuario);
-    NewCadastroModel verifica_email = newCadastroRepository.findByEmail(email); */
-    Optional<NewCadastroModel> usuariomodel = newCadastroRepository.findByEmailAndUsuario(email, usuario);
-    if (usuariomodel.isEmpty()) {
+    Optional<NewCadastroModel> verifica_usuario = newCadastroRepository.findByUsuario(usuario);
+    Optional<NewCadastroModel> verifica_email = newCadastroRepository.findByEmail(email);
+    /* Optional<NewCadastroModel> email_usuario = newCadastroRepository.findByEmailAndUsuario(email, usuario); */
+    if (verifica_usuario.isEmpty() && verifica_email.isEmpty()) {
 
       System.out.println("Usuario disponível para cadastro!");
 /*       verifica_usuario.setEmail(newCadastroModel.getEmail()); */
       /* usuariomodel.setUsuario(newCadastroModel.getUsuario()); */
 
-    NewCadastroModel newcad = new NewCadastroModel();
-    newcad.setUsuario(usuario);
-    newcad.setEmail(email);
-
-    return newCadastroRepository.save(newcad);
-  // return newCadastroRepository.save(usuariomodel.orElseThrow(() -> new Exception("Exceção do Wagner!")));
-  // erro por retornar dois valor para uma query
+      NewCadastroModel newcad = new NewCadastroModel();
+      newcad.setUsuario(usuario);
+      newcad.setEmail(email);
+      newcad.setSenha(senha);
+      return newCadastroRepository.save(newcad);
+  // return newCadastroRepository.save(usuariomodel.orElseThrow(() -> new Exception("Exceção do Wagner!")))
+    }else {
+      System.out.println("Não foi possível realizar o cadastro, o usuario " + usuario + " ou email " + email + " já existem!");
+      return null;
     }
-    System.out.println("Usuario " + usuario  + "indisponível para cadastro!");
-    return null;
   }
 
 
