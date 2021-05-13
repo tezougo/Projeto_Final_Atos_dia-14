@@ -39,7 +39,7 @@ public class NewCadastroController {
   NewCadastroModel newCadastroModel = new NewCadastroModel();
 
   // cadastro
-  @PostMapping("/{usuario}/{email}/{senha}")
+  @GetMapping("/newcadastro/{usuario}/{email}/{senha}")
   @ResponseStatus(HttpStatus.CREATED)
   public NewCadastroModel getVerifica_user(@PathVariable String usuario, @PathVariable String email, @PathVariable String senha) {
 
@@ -59,7 +59,7 @@ public class NewCadastroController {
       return newCadastroRepository.save(newcad);
   // return newCadastroRepository.save(usuariomodel.orElseThrow(() -> new Exception("Exceção do Wagner!")))
     }else {
-      System.out.println("Não foi possível realizar o cadastro, o usuario " + usuario + " ou email " + email + " já existem!");
+      System.out.println("Não foi possível realizar o cadastro, o usuario '" + usuario + "' ou email '" + email + "' já existem!");
       return null;
     }
   }

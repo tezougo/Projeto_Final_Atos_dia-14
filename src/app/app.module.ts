@@ -13,13 +13,18 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputTextModule} from 'primeng/inputtext';
 import { Componente3Component } from './compoments/componente3/componente3.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { Componente0Component } from './compoments/componente0/componente0.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     Componente1Component,
     Componente2Component,
-    Componente3Component
+    Componente3Component,
+    Componente0Component
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,9 @@ import { FileUploadModule } from 'ng2-file-upload';
     InputTextModule,
     InputTextareaModule,
     ButtonModule,
-    FileUploadModule
+    FileUploadModule,
+    MatInputModule,
+    MatButtonModule
 
   ],
   providers: [],

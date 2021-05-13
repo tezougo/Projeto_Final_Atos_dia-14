@@ -14,7 +14,7 @@ export class Servico1Service {
       return this.http.get('http://localhost:8080/conta/login');
     }
   public postCadastro(usuario: string, email: string, senha: string): Observable<any>{
-    return this.http.get('http://localhost:8080/conta/' + usuario + '/' + email + '/' + senha);
+    return this.http.get('http://localhost:8080/conta/newcadastro' + usuario + '/' + email + '/' + senha);
   }
 /*   public getUsuarioUploads(id): Observable<any>{
     return this.http.get('http://localhost:8080/usuariouploads' + id);

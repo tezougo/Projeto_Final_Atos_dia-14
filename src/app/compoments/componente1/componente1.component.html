@@ -1,21 +1,20 @@
-
 <div class="sectionLogin">
-<div class="divLogin">
-  <div class="p-field p-grid">
-    <label for="usuario" class="p-col-fixed" style="width:100px">Usuario</label>
-    <div class="p-col">
-      <input id="usuario" type="text" pInputText [(ngModel)]="usuario">
-    </div>
-  </div>
+  <div class="divLogin">
+    <form class="example-form example">
+      <mat-form-field class="example">
+        <mat-label>Usuario</mat-label>
+        <input matInput>
+      </mat-form-field>
 
-  <div class="p-field p-grid">
-    <label for="senha" class="p-col-fixed" style="width:100px">Senha</label>
-    <div class="p-col">
-      <input id="senha" type="password" pInputText [(ngModel)]="senha">
-    </div>
+      <mat-form-field class="example">
+        <mat-label>Senha</mat-label>
+        <input type="password" matInput>
+      </mat-form-field>
+    </form>
+
+
+
+    <button pButton mat-raised-button type="button" label="LOGAR" (click)="validaLogin()"></button>
+    <button pButton mat-raised-button type="button" label="CADASTRO" routerLink="/newcadastro-page/"></button><br><br>
   </div>
-  <br>
-  <button pButton type="button" label="LOGAR" (click)="validaLogin()"></button>
-  <button pButton routerlink="component2" type="button" label="CADASTRO"></button><br><br>
-</div>
 </div>
