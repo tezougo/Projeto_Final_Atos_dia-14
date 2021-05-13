@@ -29,12 +29,9 @@ export class Componente2Component implements OnInit {
               console.log('Usuario validado');
             }
           }
-          console.log(
-            'this.servico1.postCadastro ',
-            this.servico1
-              .postCadastro(this.usuario, this.email, this.senha)
-              .subscribe()
-          );
+          this.servico1
+            .postCadastro(this.usuario, this.email, this.senha)
+            .subscribe();
         }
       },
       (error: any) => {
