@@ -1,4 +1,4 @@
-package br.wrr.Entregavel_2_Fabr.Resource;
+/* package br.wrr.Entregavel_2_Fabr.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,3 +22,4 @@ public class ArquivosResource {
     armazenaArquivos.salvarArquivos(arquivoselecionado);
   }
 }
+ */

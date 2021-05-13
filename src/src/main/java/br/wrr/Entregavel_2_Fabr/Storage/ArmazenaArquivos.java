@@ -1,4 +1,4 @@
-package br.wrr.Entregavel_2_Fabr.Storage;
+/* package br.wrr.Entregavel_2_Fabr.Storage;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -34,3 +34,4 @@ public class ArmazenaArquivos {
     }
   }
 }
+ */
