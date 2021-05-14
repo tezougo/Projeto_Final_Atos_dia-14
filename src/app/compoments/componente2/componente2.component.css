@@ -57,5 +57,5 @@
 
 ::ng-deep.mat-form-field-ripple {
 /*change color of underline when focused*/
-background-color: rgb(150, 90, 0) !important;;
+background-color: rgb(0, 0, 0) !important;;
 }

@@ -10,7 +10,6 @@ import javax.persistence.Id;
 public class UsuarioUploadsModel {
 
   @Id
-  @GeneratedValue(strategy= GenerationType.IDENTITY)
   @Column(nullable = false)
   private Long id_uploads;
 

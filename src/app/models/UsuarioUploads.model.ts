@@ -1,5 +1,6 @@
-export class UsuarioUploads{
+export interface UsuarioUploads{
 
-  public video: string;
-  public audio: string;
+  id_uploads?: number;
+  video?: string;
+  audio?: string;
 }
