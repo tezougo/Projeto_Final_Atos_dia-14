@@ -3,12 +3,12 @@
     <form class="example-form example">
       <mat-form-field class="example">
         <mat-label>Usuario</mat-label>
-        <input matInput>
+        <input type="text" matInput pInputText [(ngModel)]="usuario" name="usuario" style="color: rgb(0, 0, 0)">
       </mat-form-field>
 
       <mat-form-field class="example">
         <mat-label>Senha</mat-label>
-        <input type="password" matInput>
+        <input type="password" matInput pInputText [(ngModel)]="senha" name="senha" style="color: rgb(0, 0, 0)">
       </mat-form-field>
     </form>
 

@@ -18,24 +18,30 @@ export class Componente1Component implements OnInit {
   newcadastro: NewCadastro[];
   usuario: string;
   senha: string;
+  encontrado: boolean = false;
   ngOnInit(): void {}
-  // tslint:disable-next-line:typedef
+
   validaLogin() {
     this.servico1.getLogin().subscribe(
       (data: NewCadastro[]) => {
         this.newcadastro = data;
-        console.log('O que retornou em dados "set": ', data);
-        console.log('Variavel cadastro: ', this.newcadastro);
+        console.log('dataaa: ', data);
         if (this.newcadastro) {
-          for (let aux of this.newcadastro) {
+          for (const aux of this.newcadastro){
+            console.log("aux.usuario", aux.usuario);
+            console.log('this.usuario', this.usuario);
+            console.log(aux.senha);
+            console.log(this.senha);
             if (this.usuario == aux.usuario && this.senha == aux.senha) {
-              console.log('Usuario validado');
-              this.router.navigate(['/uploads-page'])
-            }else{
-              alert("Usuario não cadastrado!");
-              this.router.navigate(['/newcadastro-page'])
-              break;
+              this.encontrado == true;
             }
+          }
+          if (this.encontrado == true) {
+            alert('Login realizado com sucesso!');
+            this.router.navigate(['/uploads-page']);
+          } else {
+            alert('Usuário não cadastrado!');
+            this.router.navigate(['/newcadastro-page']);
           }
         }
       },
