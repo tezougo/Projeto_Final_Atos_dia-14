@@ -1,0 +1,32 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace, "Helvetica Neue", sans-serif;
+
+}
+.sectionCadastro{
+    margin: 0 auto;
+    height: 100%;
+    width:  100%;
+    background-color:rgb(42, 42, 42);
+    color: rgb(165, 16, 165);
+    border:2px solid black;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+.divCadastro{
+    width: 50%;
+    font-size: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
