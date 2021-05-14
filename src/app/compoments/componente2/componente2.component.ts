@@ -22,7 +22,7 @@ export class Componente2Component implements OnInit {
 
   ngOnInit(): void {}
 
-  adicionaUsuario() {
+  validaLogin() {
     if (this.usuario == null || this.email == null || this.senha == null) {
       this.newcadastro = false;
     } else {
