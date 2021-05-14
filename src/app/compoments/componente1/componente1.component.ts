@@ -28,12 +28,8 @@ export class Componente1Component implements OnInit {
         console.log('dataaa: ', data);
         if (this.newcadastro) {
           for (const aux of this.newcadastro){
-            console.log("aux.usuario", aux.usuario);
-            console.log('this.usuario', this.usuario);
-            console.log(aux.senha);
-            console.log(this.senha);
             if (this.usuario == aux.usuario && this.senha == aux.senha) {
-              this.encontrado == true;
+              this.encontrado = true;
             }
           }
           if (this.encontrado == true) {

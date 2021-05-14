@@ -16,7 +16,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { Componente0Component } from './compoments/componente0/componente0.component';
-
+import { TabMenuModule } from 'primeng/tabmenu';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,9 @@ import { Componente0Component } from './compoments/componente0/componente0.compo
     ButtonModule,
     FileUploadModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    TabMenuModule,
+
 
   ],
   providers: [],

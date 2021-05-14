@@ -1,4 +1,5 @@
 
+<p-tabMenu [model]="items" [activeItem]="items[0]"></p-tabMenu>
 
 <div class="container">
 
@@ -75,12 +76,12 @@
           <h3>Selecione os arquivos</h3>
           <div>
             <h3>Áudio</h3>
-            <input type="file" ng2FileSelect [uploader]="" multiple /><br />
+            <input type="file" ng2FileSelect multiple /><br />
           </div>
           <br>
           <div>
             <h3>Video</h3>
-              <input type="file" ng2FileSelect [uploader]="" multiple /><br />
+              <input type="file" ng2FileSelect  multiple /><br />
 
           </div>
 
@@ -95,7 +96,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">Response</div>
         <div class="panel-body">
-         <!--  {{ response }} -->
+        <!--  {{ response }} -->
         </div>
       </div>
     </div>

@@ -1,4 +1,10 @@
 
+.fundo-componente1 {
+  background-image: url('../../../assets/telafundosite.JPG');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
 .sectionLogin{
     margin: 0 auto;
     height: 100%;
@@ -12,12 +18,24 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.divLogin {
+  width: 50%;
+  font-size: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
 
-.divLogin{
-    width: 50%;
-    font-size: 30px;
-    text-align: center;
-    vertical-align: middle;
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+}
+.example {
+  font-style: bold;
+  width: 100%;
+  font-size: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
 }
 .exemplo-label {
   display: table-cell;
@@ -26,17 +44,18 @@
   min-width: 120px;
   color: rgb(16, 17, 9);
 }
+
 ::ng-deep .mat-focused .mat-form-field-label {
   /*change color of label*/
-  color: rgb(255, 195, 117) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 ::ng-deep.mat-form-field-underline {
   /*change color of underline*/
-  background-color: rgb(94, 64, 0) !important;
+  background-color: rgb(126, 126, 126) !important;
 }
 
 ::ng-deep.mat-form-field-ripple {
 /*change color of underline when focused*/
-background-color: rgb(150, 90, 0) !important;;
+background-color: rgb(0, 0, 0) !important;;
 }
