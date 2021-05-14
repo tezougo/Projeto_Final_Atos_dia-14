@@ -21,6 +21,7 @@ import { Componente4Component } from './compoments/componente4/componente4.compo
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { Componente5Component } from './compoments/componente5/componente5.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MatSortModule } from '@angular/material/sort';
     Componente3Component,
     Componente0Component,
     Componente4Component,
+    Componente5Component,
   ],
   imports: [
     BrowserModule,

@@ -28,6 +28,11 @@ public class NewCadastroController {
     return newCadastroRepository.findAll();
   }
 
+  @GetMapping("/id/{id}")
+  public Optional<NewCadastroModel> getId(@PathVariable Long id){
+    return newCadastroRepository.findById(id);
+  }
+
 /*   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
   public NewCadastroModel postCadastro(@RequestBody NewCadastroModel newCadastroModel){
