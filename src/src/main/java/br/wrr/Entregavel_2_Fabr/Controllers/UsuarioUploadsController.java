@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.wrr.Entregavel_2_Fabr.Models.UsuarioUploadsModel;
-import br.wrr.Entregavel_2_Fabr.Repositorys.UsuarioUploadsRepository;
+import br.wrr.Entregavel_2_Fabr.Repositories.UsuarioUploadsRepository;
 @RestController
 @RequestMapping("/usuariouploads")
 public class UsuarioUploadsController {

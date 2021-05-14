@@ -1,4 +1,4 @@
-package br.wrr.Entregavel_2_Fabr.Repositorys;
+package br.wrr.Entregavel_2_Fabr.Repositories;
 
 import java.util.Optional;
 

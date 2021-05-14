@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.wrr.Entregavel_2_Fabr.Models.NewCadastroModel;
-import br.wrr.Entregavel_2_Fabr.Repositorys.NewCadastroRepository;
+import br.wrr.Entregavel_2_Fabr.Repositories.NewCadastroRepository;
 
 @CrossOrigin
 @RestController

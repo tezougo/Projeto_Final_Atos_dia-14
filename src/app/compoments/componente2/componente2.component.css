@@ -35,11 +35,27 @@
   font-size: 100%;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
 }
 .exemplo-label {
   display: table-cell;
   font-size: 14px;
   margin-left: 8px;
   min-width: 120px;
-  color: ghostwhite;
+  color: rgb(16, 17, 9);
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: rgb(255, 255, 255) !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: rgb(126, 126, 126) !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+/*change color of underline when focused*/
+background-color: rgb(150, 90, 0) !important;;
 }

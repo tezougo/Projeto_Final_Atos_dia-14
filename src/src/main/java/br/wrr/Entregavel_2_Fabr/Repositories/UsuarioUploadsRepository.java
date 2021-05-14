@@ -1,4 +1,4 @@
-package br.wrr.Entregavel_2_Fabr.Repositorys;
+package br.wrr.Entregavel_2_Fabr.Repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
