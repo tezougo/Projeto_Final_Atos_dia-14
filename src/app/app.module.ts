@@ -18,10 +18,6 @@ import { TabMenuModule } from 'primeng/tabmenu';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Componente4Component } from './compoments/componente4/componente4.component';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
-import { Componente5Component } from './compoments/componente5/componente5.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +27,6 @@ import { Componente5Component } from './compoments/componente5/componente5.compo
     Componente3Component,
     Componente0Component,
     Componente4Component,
-    Componente5Component,
   ],
   imports: [
     BrowserModule,
@@ -47,10 +42,7 @@ import { Componente5Component } from './compoments/componente5/componente5.compo
     MatInputModule,
     MatButtonModule,
     TabMenuModule,
-    OrderModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],
